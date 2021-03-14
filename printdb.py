@@ -27,7 +27,7 @@ def main():
         print(item.__str__())
     list = rep.Activities.find_all()
     print()
-    list = rep.Employees.find_all()
+    list = rep.Employees.find_all_report()
     print("Employees report")
     for item in list:
         name = item.name
