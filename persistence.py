@@ -101,6 +101,8 @@ class _Employees:
                 """).fetchall()
         return [Employee(*row) for row in all]
 
+    def find_all_report(self):
+        return [Employee(*row) for row in self._conn.cursor().execute("""SELECT id, name, salary, coffee_stand FROM Employees ORDER BY name""").fetchall()]
 
 class _Suppliers:
     def __init__(self, conn):
